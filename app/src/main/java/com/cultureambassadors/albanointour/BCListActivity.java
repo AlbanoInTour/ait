@@ -2,9 +2,9 @@ package com.cultureambassadors.albanointour;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,6 +26,7 @@ public class BCListActivity extends AppCompatActivity
         bcRecyclerView.setAdapter(bcViewAdapter);
         Toolbar toolbar = findViewById(R.id.bcListToolbar);
         toolbar.setTitle(filter);
+        setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener()
         {
             @Override
