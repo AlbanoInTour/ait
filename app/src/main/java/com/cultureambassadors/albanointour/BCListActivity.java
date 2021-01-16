@@ -26,7 +26,6 @@ public class BCListActivity extends AppCompatActivity
         bcRecyclerView.setAdapter(bcViewAdapter);
         Toolbar toolbar = findViewById(R.id.bcListToolbar);
         toolbar.setTitle(filter);
-        setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -35,5 +34,6 @@ public class BCListActivity extends AppCompatActivity
                 onBackPressed();
             }
         });
+        setSupportActionBar(toolbar);
     }
 }
