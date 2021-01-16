@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".BCListActivity">
 
-    <Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/bcListToolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
