@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startList(View view){
-        Intent intent = new Intent(this, BCActivity.class);
+        Intent intent = new Intent(this, BCListActivity.class);
         String []filters = getResources().getStringArray(R.array.filters);
         String filter = "";
         if(view.getId() == R.id.btnReligiosi)
