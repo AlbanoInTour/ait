@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Albano In Tour</string>
+
+    <string name="btnReligiosi">Edifici Religiosi</string>
+    <string name="btnStorici">Edifici Storici</string>
+    <string name="btnMostre">Mostre</string>
+    <string name="btnMusei">Musei</string>
+    <string name="btnEventiCulturali">Eventi Culturali</string>
+    <string name="btnParchi">Parchi</string>
+
+    <string-array name="filters">
+        <item>Religiosi</item>
+        <item>Storici</item>
+        <item>Mostre</item>
+        <item>Musei</item>
+        <item>Eventi culturali</item>
+        <item>Parchi</item>
+    </string-array>
 </resources>

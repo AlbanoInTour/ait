@@ -6,13 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btnReligiosi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="startList"
+        android:text="@string/btnReligiosi"
+        app:layout_constraintBottom_toTopOf="@+id/btnMostre"
+        app:layout_constraintEnd_toStartOf="@+id/btnStorici"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnStorici"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startList"
+        android:text="@string/btnStorici"
+        app:layout_constraintBottom_toTopOf="@+id/btnMusei"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnReligiosi"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnMostre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startList"
+        android:text="@string/btnMostre"
+        app:layout_constraintBottom_toTopOf="@+id/btnEventiCulturali"
+        app:layout_constraintEnd_toEndOf="@+id/btnReligiosi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnReligiosi"
+        app:layout_constraintTop_toBottomOf="@+id/btnReligiosi" />
+
+    <Button
+        android:id="@+id/btnMusei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startList"
+        android:text="@string/btnMusei"
+        app:layout_constraintBottom_toTopOf="@+id/btnParchi"
+        app:layout_constraintEnd_toEndOf="@+id/btnStorici"
+        app:layout_constraintStart_toStartOf="@+id/btnStorici"
+        app:layout_constraintTop_toBottomOf="@+id/btnStorici" />
+
+    <Button
+        android:id="@+id/btnEventiCulturali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startList"
+        android:text="@string/btnEventiCulturali"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnReligiosi"
+        app:layout_constraintStart_toStartOf="@+id/btnReligiosi"
+        app:layout_constraintTop_toBottomOf="@+id/btnMostre" />
+
+    <Button
+        android:id="@+id/btnParchi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnParchi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnMusei"
+        app:layout_constraintStart_toStartOf="@+id/btnMusei"
+        app:layout_constraintTop_toBottomOf="@+id/btnMusei"
+        android:onClick="startList" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
