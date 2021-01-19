@@ -19,7 +19,7 @@
         <ImageView
             android:layout_width="275dp"
             android:layout_height="wrap_content"
-
+            android:adjustViewBounds="true"
             android:src="@drawable/logo" />
     </androidx.appcompat.widget.Toolbar>
 
