@@ -158,22 +158,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:gravity="center_horizontal"
+                android:gravity="center"
+                android:weightSum="2"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/recensioniBtn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginEnd="10dp"
                     android:backgroundTint="@color/colorPrimary"
                     android:text="Recensioni" />
 
                 <Button
                     android:id="@+id/covidBtn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginStart="10dp"
                     android:backgroundTint="@color/colorPrimary"
                     android:text="Normative anti Covid-19" />
             </LinearLayout>
