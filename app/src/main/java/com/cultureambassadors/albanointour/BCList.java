@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class BCList
 {
-    private static final ArrayList<BC> allBc = new ArrayList<BC>();
+    private static final ArrayList<BC> allBc = new ArrayList<>();
     private static BCList bcList;
     
     private BCList()
