@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -59,7 +60,9 @@ public class BCActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                startActivity(new Intent(getApplicationContext(), ));
+                //startActivity(new Intent(getApplicationContext(), ));
+                // TODO implementare intent
+                Toast.makeText(getApplicationContext(), "text", Toast.LENGTH_SHORT).show();
             }
         });
         covidBtn.setOnClickListener(new View.OnClickListener()
@@ -67,7 +70,9 @@ public class BCActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                startActivity(new Intent(getApplicationContext(),));
+                //startActivity(new Intent(getApplicationContext(),));
+                //TODO implementare intent
+                Toast.makeText(getApplicationContext(), "text", Toast.LENGTH_SHORT).show();
             }
         });
     }
