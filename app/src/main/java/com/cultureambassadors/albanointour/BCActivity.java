@@ -60,9 +60,9 @@ public class BCActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                //Intent i = new Intent(getApplicationContext(), RecensioneActivity.class);
-                //i.putExtra("name", bc.getNome());
-                //startActivity();
+                Intent i = new Intent(getApplicationContext(), RecensioneActivity.class);
+                i.putExtra("name", bc.getNome());
+                startActivity(i);
             }
         });
         covidBtn.setOnClickListener(new View.OnClickListener()
