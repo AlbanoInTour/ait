@@ -6,7 +6,6 @@ import androidx.core.app.NotificationBuilderWithBuilderAccessor;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-//TODO aggiungere il logo
 
 
 public class MainActivity extends AppCompatActivity {
