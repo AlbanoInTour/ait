@@ -9,8 +9,9 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AlbanoInTour">
-        <activity android:name=".BCActivity"/>
-        <activity android:name=".BCListActivity"/>
+        <activity android:name=".RecensioneActivity"/>
+        <activity android:name=".BCActivity" />
+        <activity android:name=".BCListActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
