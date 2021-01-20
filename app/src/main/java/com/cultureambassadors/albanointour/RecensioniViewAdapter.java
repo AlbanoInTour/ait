@@ -24,13 +24,14 @@ public class RecensioniViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     }
     private void filter(String filter)
     {
-        //ArrayList<Recensioni_List.Recensione> allBc = Recensioni_List.Recensione;
+
 
         float votoTot=0;
         for(Recensioni_List.Recensione rec  : Recensioni_List.getList()) {
             if (rec.getLuogo().equals(filter)) {
                 conta++;
                 votoTot += rec.voto;
+                bc.add(rec);
             }
         }
         media=votoTot/conta;
