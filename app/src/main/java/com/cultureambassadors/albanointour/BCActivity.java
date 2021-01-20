@@ -56,13 +56,13 @@ public class BCActivity extends AppCompatActivity
         Button recensioniBtn = findViewById(R.id.recensioniBtn);
         Button covidBtn = findViewById(R.id.covidBtn);
         recensioniBtn.setOnClickListener(new View.OnClickListener()
-        {
+        {//TODO implementare intent
             @Override
             public void onClick(View v)
             {
-                //startActivity(new Intent(getApplicationContext(), ));
-                // TODO implementare intent
-                Toast.makeText(getApplicationContext(), "text", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), RecensioneActivity.class);
+                intent.putExtra("name", "I Cisternoni");
+                startActivity(intent);
             }
         });
         covidBtn.setOnClickListener(new View.OnClickListener()
