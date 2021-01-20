@@ -1,18 +1,17 @@
 package com.cultureambassadors.albanointour;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class BCActivity extends AppCompatActivity
 {
+    private BCList.BC bc;
     
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -44,6 +43,7 @@ public class BCActivity extends AppCompatActivity
         for (BCList.BC bc : BCList.getList())
             if (bc.getNome().equals(name))
             {
+                this.bc = bc;
                 nameTxt.setText(bc.getNome());
                 descTxt.setText(bc.getDescrizione());
                 addressTxt.setText(bc.getIndirizzo());
@@ -60,9 +60,9 @@ public class BCActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                //startActivity(new Intent(getApplicationContext(), ));
-                // TODO implementare intent
-                Toast.makeText(getApplicationContext(), "text", Toast.LENGTH_SHORT).show();
+                //Intent i = new Intent(getApplicationContext(), RecensioneActivity.class);
+                //i.putExtra("name", bc.getNome());
+                //startActivity();
             }
         });
         covidBtn.setOnClickListener(new View.OnClickListener()
@@ -71,8 +71,6 @@ public class BCActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 //startActivity(new Intent(getApplicationContext(),));
-                //TODO implementare intent
-                Toast.makeText(getApplicationContext(), "text", Toast.LENGTH_SHORT).show();
             }
         });
     }
