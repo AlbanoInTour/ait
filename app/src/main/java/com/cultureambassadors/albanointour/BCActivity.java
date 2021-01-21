@@ -95,7 +95,7 @@ public class BCActivity extends AppCompatActivity
                     }
                     orariTxt.setText(Html.fromHtml(orari.substring(0,orari.length()-4)));
                     tariffeTxt.setText(bc.getTariffe());
-                    durataTxt.setText(bc.getDurata());
+                    durataTxt.setText(bc.getDurataString());
                     img.setImageResource(getResources().getIdentifier(bc.getImg(), "drawable", getPackageName()));
                     break;
                 }
