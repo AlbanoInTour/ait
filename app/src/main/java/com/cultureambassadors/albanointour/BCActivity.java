@@ -1,5 +1,7 @@
 package com.cultureambassadors.albanointour;
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -7,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -17,6 +20,7 @@ public class BCActivity extends AppCompatActivity
 {
     private BCList.BC bc;
     
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -106,9 +110,9 @@ public class BCActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                //Intent i = new Intent(getApplicationContext(), RecensioneActivity.class);
-                //i.putExtra("name", bc.getNome());
-                //startActivity(i);
+                Intent i = new Intent(getApplicationContext(), RecensioneActivity.class);
+                i.putExtra("name", bc.getNome());
+                startActivity(i);
             }
         });
         covidBtn.setOnClickListener(new View.OnClickListener()
