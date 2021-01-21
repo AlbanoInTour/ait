@@ -9,8 +9,8 @@
     <string name="btnParchi">Parchi</string>
 
     <string-array name="filters">
-        <item>Religiosi</item>
-        <item>Storici</item>
+        <item>Edifici Religiosi</item>
+        <item>Edifici Storici</item>
         <item>Mostre</item>
         <item>Musei</item>
         <item>Eventi culturali</item>
