@@ -1,4 +1,4 @@
-package com.example.albanointuring;
+package com.cultureambassadors.albanointour;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
