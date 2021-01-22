@@ -40,7 +40,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Normative Anti-Covid"
                 android:textColor="@color/black"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold">
 
             </TextView>
@@ -54,7 +54,7 @@
                 android:layout_marginBottom="15dp"
                 android:text="In osservanza del DPCM del 14 Gennaio 2021 n.2, si raccomanda di osservare le seguenti misure di contenimento per la diffusione del virus: \n-Indossare sempre la mascherina anche all'aperto\n- Mantienere la distanza di sicurezza di almeno un metro\n-Qualora dovessero insorgere sintomi influenzali e/o temperatura corporea al di sopra dei 37,5 gradi, rimanere a casa e contattare un dottore."
                 android:textColor="@color/black"
-                android:textSize="20dp"></TextView>
+                android:textSize="20sp"/>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
