@@ -7,38 +7,39 @@
 
     <TextView
         android:id="@+id/rec_Nome"
-        android:layout_width="101dp"
-        android:layout_height="47dp"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/rec_Voto"
-        android:layout_width="135dp"
-        android:layout_height="48dp"
+        android:layout_width="67dp"
+        android:layout_height="30dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/rec_Nome"
+        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/rec_testo"
-        android:layout_width="276dp"
-        android:layout_height="146dp"
+        android:layout_width="400dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="264dp"
         android:text="TextView"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/rec_Nome"
-        app:layout_constraintTop_toBottomOf="@+id/rec_Voto" />
+        app:layout_constraintTop_toBottomOf="@+id/rec_Nome" />
 </androidx.constraintlayout.widget.ConstraintLayout>
