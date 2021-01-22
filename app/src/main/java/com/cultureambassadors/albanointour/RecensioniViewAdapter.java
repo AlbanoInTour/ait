@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,19 +14,22 @@ import java.util.ArrayList;
 
 public class RecensioniViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 {
-    
+
+    private final RatingBar ratingBar;
     private ArrayList<Recensioni_List.Recensione> bc = new ArrayList<>();
     private Context context;
     private int conta = 0;
     private float media;
+
     
-    public RecensioniViewAdapter(Context context, String filter)
+    public RecensioniViewAdapter(Context context, String filter, RatingBar ratingBar, TextView voto_m)
     {
+        this.ratingBar=ratingBar;
         this.context = context;
-        filter(filter);
+        filter(filter, ratingBar, voto_m);
     }
     
-    private void filter(String filter)
+    private void filter(String filter, RatingBar ratingBar, TextView voto_m)
     {
         float votoTot = 0;
         for (Recensioni_List.Recensione rec : Recensioni_List.getList())
@@ -38,6 +42,9 @@ public class RecensioniViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
             }
         }
         media = votoTot / conta;
+        ratingBar.setIsIndicator(false);
+        ratingBar.setRating(media);
+        voto_m.setText(String.valueOf(media));
     }
     
     

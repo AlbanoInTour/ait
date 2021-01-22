@@ -36,7 +36,7 @@ public class RecensioneActivity extends AppCompatActivity
         RecyclerView recRecyclerView = findViewById(R.id.Rec_RecyclerView);
         recRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         
-        RecensioniViewAdapter recensioniViewAdapter = new RecensioniViewAdapter(getApplicationContext(), name);
+        RecensioniViewAdapter recensioniViewAdapter = new RecensioniViewAdapter(getApplicationContext(), name, ratingBar, voto_m);
         recRecyclerView.setAdapter(recensioniViewAdapter);
     }
 }
