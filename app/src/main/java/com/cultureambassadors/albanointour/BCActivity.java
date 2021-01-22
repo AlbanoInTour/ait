@@ -188,7 +188,7 @@ public class BCActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                //startActivity(new Intent(getApplicationContext(),));
+                startActivity(new Intent(getApplicationContext(), Normative_AntiCovid.class));
             }
         });
     }
