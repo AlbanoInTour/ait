@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AlbanoInTour">
         <activity android:name=".RecensioneActivity"/>
+        <activity android:name=".Normative_AntiCovid"/>
         <activity android:name=".BCActivity" />
         <activity android:name=".BCListActivity" />
         <activity android:name=".MainActivity">

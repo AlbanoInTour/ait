@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimaryBackground"
-        android:orientation="vertical"
-        tools:context=".RecensioneActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:orientation="vertical"
+    tools:context=".RecensioneActivity">
 
 
     <androidx.appcompat.widget.Toolbar
@@ -23,8 +23,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <RatingBar
             android:id="@+id/ratingBar"
@@ -34,7 +34,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.426"
             app:layout_constraintStart_toStartOf="parent"
-
             app:layout_constraintTop_toBottomOf="@+id/txt_Recensioni"
             app:layout_constraintVertical_bias="0.106" />
 
@@ -52,11 +51,15 @@
 
         <TextView
             android:id="@+id/voto_medio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="23dp"
+            android:layout_width="77dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="16dp"
             android:text="..."
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toEndOf="@+id/ratingBar"
             app:layout_constraintTop_toBottomOf="@+id/txt_Recensioni" />
 
@@ -80,4 +83,3 @@
         tools:layout_editor_absoluteX="0dp" />
 
 </LinearLayout>
-
