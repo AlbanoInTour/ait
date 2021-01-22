@@ -95,31 +95,31 @@ public class BCViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 switch (day)
                 {
                     case Calendar.MONDAY:
-                        orario = filteredBc.get(position - 1).getOrariString().get(0).split("\t")[1];
+                        orario = filteredBc.get(position - 1).getOrariString().get(0);
                         times = filteredBc.get(position - 1).getOrariDates().get("lunedì:");
                         break;
                     case Calendar.TUESDAY:
-                        orario = filteredBc.get(position - 1).getOrariString().get(1).split("\t")[1];
+                        orario = filteredBc.get(position - 1).getOrariString().get(1);
                         times = filteredBc.get(position - 1).getOrariDates().get("martedì:");
                         break;
                     case Calendar.WEDNESDAY:
-                        orario = filteredBc.get(position - 1).getOrariString().get(2).split("\t")[1];
+                        orario = filteredBc.get(position - 1).getOrariString().get(2);
                         times = filteredBc.get(position - 1).getOrariDates().get("marcoledì:");
                         break;
                     case Calendar.THURSDAY:
-                        orario = filteredBc.get(position - 1).getOrariString().get(3).split("\t")[1];
+                        orario = filteredBc.get(position - 1).getOrariString().get(3);
                         times = filteredBc.get(position - 1).getOrariDates().get("giovedì:");
                         break;
                     case Calendar.FRIDAY:
-                        orario = filteredBc.get(position - 1).getOrariString().get(4).split("\t")[1];
+                        orario = filteredBc.get(position - 1).getOrariString().get(4);
                         times = filteredBc.get(position - 1).getOrariDates().get("venerdì:");
                         break;
                     case Calendar.SATURDAY:
-                        orario = filteredBc.get(position - 1).getOrariString().get(5).split("\t")[1];
+                        orario = filteredBc.get(position - 1).getOrariString().get(5);
                         times = filteredBc.get(position - 1).getOrariDates().get("sabato:");
                         break;
                     case Calendar.SUNDAY:
-                        orario = filteredBc.get(position - 1).getOrariString().get(6).split("\t")[1];
+                        orario = filteredBc.get(position - 1).getOrariString().get(6);
                         times = filteredBc.get(position - 1).getOrariDates().get("domenica:");
                         break;
                 }
@@ -156,6 +156,8 @@ public class BCViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                         int durataInMinuti = durata.getHour() * 60 + durata.getMinute();
                         if (MINUTES.between(now, ora[1]) < durataInMinuti)
                             return "In chiusura";
+                        else
+                            return "Aperto";
                     }
                     else
                         return "Aperto";

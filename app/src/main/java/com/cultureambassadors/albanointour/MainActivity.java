@@ -1,21 +1,20 @@
 package com.cultureambassadors.albanointour;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationBuilderWithBuilderAccessor;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
+    
     public void startList(View view){
         Intent intent = new Intent(this, BCListActivity.class);
         String []filters = getResources().getStringArray(R.array.filters);
@@ -33,6 +32,6 @@ public class MainActivity extends AppCompatActivity {
         else
             intent.putExtra("filter", filters[5]);
         startActivity(intent);
-
+        
     }
 }

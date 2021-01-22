@@ -1,9 +1,9 @@
 package com.cultureambassadors.albanointour;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class BCActivity extends AppCompatActivity
@@ -44,7 +45,20 @@ public class BCActivity extends AppCompatActivity
         TextView nameTxt = findViewById(R.id.bcPageName);
         TextView descTxt = findViewById(R.id.bcPageDescription);
         TextView addressTxt = findViewById(R.id.bcPageAddress);
-        TextView orariTxt = findViewById(R.id.bcPageOrari);
+        TextView lun = findViewById(R.id.lunedi);
+        TextView mar = findViewById(R.id.martedi);
+        TextView mer = findViewById(R.id.mercoledi);
+        TextView gio = findViewById(R.id.giovedi);
+        TextView ven = findViewById(R.id.venerdi);
+        TextView sab = findViewById(R.id.sabato);
+        TextView dom = findViewById(R.id.domenica);
+        TextView lunTxt = findViewById(R.id.lunediTxt);
+        TextView marTxt = findViewById(R.id.martediTxt);
+        TextView merTxt = findViewById(R.id.mercolediTxt);
+        TextView gioTxt = findViewById(R.id.giovedTxt);
+        TextView venTxt = findViewById(R.id.venerdiTxt);
+        TextView sabTxt = findViewById(R.id.sabatoTxt);
+        TextView domTxt = findViewById(R.id.domenicaTxt);
         TextView tariffeTxt = findViewById(R.id.bcPageTariffe);
         TextView durataTxt = findViewById(R.id.bcPageDurata);
         ImageView img = findViewById(R.id.bcPageImg);
@@ -57,43 +71,97 @@ public class BCActivity extends AppCompatActivity
                     nameTxt.setText(bc.getNome());
                     descTxt.setText(bc.getDescrizione());
                     addressTxt.setText(bc.getIndirizzo());
-                    String orari = "";
-                    String giorno_attuale = "";
+                    int giorno_attuale = 0;
                     Calendar calendar = Calendar.getInstance();
                     int day = calendar.get(Calendar.DAY_OF_WEEK);
                     switch (day)
                     {
                         case Calendar.MONDAY:
-                            giorno_attuale= "lunedì:";
+                            giorno_attuale = 0;
                             break;
                         case Calendar.TUESDAY:
-                            giorno_attuale= "martedì:";
+                            giorno_attuale = 1;
                             break;
                         case Calendar.WEDNESDAY:
-                            giorno_attuale= "mercoledì:";
+                            giorno_attuale = 2;
                             break;
                         case Calendar.THURSDAY:
-                            giorno_attuale= "giovedì:";
+                            giorno_attuale = 3;
                             break;
                         case Calendar.FRIDAY:
-                            giorno_attuale= "venerdì:";
+                            giorno_attuale = 4;
                             break;
                         case Calendar.SATURDAY:
-                            giorno_attuale= "sabato:";
+                            giorno_attuale = 5;
                             break;
                         case Calendar.SUNDAY:
-                            giorno_attuale= "domenica:";
+                            giorno_attuale = 6;
                             break;
                     }
-                    for (String giorno : bc.getOrariString())
+                    ArrayList<String> orari = bc.getOrariString();
+                    for (int i = 0; i < orari.size(); i++)
                     {
-                        if (giorno.contains(giorno_attuale))
-                            orari += "<b>"+giorno+"</b>";
-                        else
-                            orari+=giorno;
-                        orari+="<br>";
+                        String orario = orari.get(i).replace(";", "; ");
+                        switch (i)
+                        {
+                            case 0:
+                                lun.setText(orario);
+                                if (i == giorno_attuale)
+                                {
+                                    lunTxt.setTypeface(null, Typeface.BOLD);
+                                    lun.setTypeface(null, Typeface.BOLD);
+                                }
+                                break;
+                            case 1:
+                                mar.setText(orario);
+                                if (i == giorno_attuale)
+                                {
+                                    marTxt.setTypeface(null, Typeface.BOLD);
+                                    mar.setTypeface(null, Typeface.BOLD);
+                                }
+                                break;
+                            case 2:
+                                mer.setText(orario);
+                                if (i == giorno_attuale)
+                                {
+                                    merTxt.setTypeface(null, Typeface.BOLD);
+                                    mer.setTypeface(null, Typeface.BOLD);
+                                }
+                                break;
+                            case 3:
+                                gio.setText(orario);
+                                if (i == giorno_attuale)
+                                {
+                                    gioTxt.setTypeface(null, Typeface.BOLD);
+                                    gio.setTypeface(null, Typeface.BOLD);
+                                }
+                                break;
+                            case 4:
+                                ven.setText(orari.get(i));
+                                if (i == giorno_attuale)
+                                {
+                                    venTxt.setTypeface(null, Typeface.BOLD);
+                                    ven.setTypeface(null, Typeface.BOLD);
+                                }
+                                break;
+                            case 5:
+                                sab.setText(orari.get(i));
+                                if (i == giorno_attuale)
+                                {
+                                    sabTxt.setTypeface(null, Typeface.BOLD);
+                                    sab.setTypeface(null, Typeface.BOLD);
+                                }
+                                break;
+                            case 6:
+                                dom.setText(orari.get(i));
+                                if (i == giorno_attuale)
+                                {
+                                    domTxt.setTypeface(null, Typeface.BOLD);
+                                    dom.setTypeface(null, Typeface.BOLD);
+                                }
+                                break;
+                        }
                     }
-                    orariTxt.setText(Html.fromHtml(orari.substring(0,orari.length()-4)));
                     tariffeTxt.setText(bc.getTariffe());
                     durataTxt.setText(bc.getDurataString());
                     img.setImageResource(getResources().getIdentifier(bc.getImg(), "drawable", getPackageName()));
