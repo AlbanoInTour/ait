@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#55B2F7</color>
     <color name="colorPrimaryBackground">#C2E6FF</color>
+    <color name="colorSecondary">#f79b55</color>
     <color name="green">#00CC00</color>
     <color name="red">#CC0000</color>
     <color name="orange">#FF8C00</color>
