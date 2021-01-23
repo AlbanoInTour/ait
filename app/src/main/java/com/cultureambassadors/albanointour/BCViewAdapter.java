@@ -130,6 +130,8 @@ public class BCViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     ((BCViewHolder) holder).open_close.setTextColor(holder.itemView.getResources().getColor(R.color.red));
                 else if (open.equals("In chiusura"))
                     ((BCViewHolder) holder).open_close.setTextColor(holder.itemView.getResources().getColor(R.color.orange));
+                else
+                    ((BCViewHolder) holder).open_close.setTextColor(holder.itemView.getResources().getColor(R.color.green));
                 break;
         }
     }
