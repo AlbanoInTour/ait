@@ -1,4 +1,4 @@
-package com.cultureambassadors.albanointour.main;
+package com.cultureambassadors.albanointour;
 
 import android.content.Intent;
 import android.os.Bundle;
