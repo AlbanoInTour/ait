@@ -25,7 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/normativeToolbar"
         android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/white">
 
         <RelativeLayout
             android:layout_width="match_parent"
