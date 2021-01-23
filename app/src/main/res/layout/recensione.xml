@@ -28,13 +28,14 @@
             <TextView
                 android:id="@+id/rec_Nome"
                 android:layout_width="126dp"
-                android:layout_height="30dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="8dp"
                 android:text="TextView"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.042"
+                app:layout_constraintHorizontal_bias="0.041"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,6 +43,7 @@
                 android:id="@+id/rec_Voto"
                 android:layout_width="103dp"
                 android:layout_height="33dp"
+                android:layout_marginTop="8dp"
                 android:text="TextView"
                 android:textColor="#000000"
                 android:textSize="18sp"

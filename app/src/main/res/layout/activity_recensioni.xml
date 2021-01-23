@@ -37,20 +37,20 @@
             android:progressTint="#FFD700"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.426"
+            app:layout_constraintHorizontal_bias="0.578"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_Recensioni"
-            app:layout_constraintVertical_bias="0.106" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/txt_Recensioni"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="156dp"
+            android:layout_height="37dp"
             android:text="Recensioni"
             android:textColor="#000000"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintHorizontal_bias="0.533"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,13 +58,13 @@
             android:id="@+id/voto_medio"
             android:layout_width="77dp"
             android:layout_height="39dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="..."
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/ratingBar"
             app:layout_constraintTop_toBottomOf="@+id/txt_Recensioni" />
 
