@@ -44,7 +44,8 @@ public class RecensioniViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         media = votoTot / conta;
         ratingBar.setIsIndicator(false);
         ratingBar.setRating(media);
-        voto_m.setText(String.valueOf(media));
+
+        voto_m.setText(String.valueOf(String.format("%.2g%n", media)));
     }
     
     

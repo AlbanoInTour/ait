@@ -1,6 +1,7 @@
 package com.cultureambassadors.albanointour;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -19,8 +20,15 @@ public class RecensioneActivity extends AppCompatActivity
         setContentView(R.layout.activity_recensioni);
         Toolbar toolbar = findViewById(R.id.toolbar_rece);
         toolbar.setTitle(""); //TODO Titolo luogo
-        
-        toolbar.setNavigationOnClickListener(v -> onBackPressed());
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                onBackPressed();
+            }
+        });
         setSupportActionBar(toolbar);
         Bundle bundle = getIntent().getExtras();
         String name = "";
