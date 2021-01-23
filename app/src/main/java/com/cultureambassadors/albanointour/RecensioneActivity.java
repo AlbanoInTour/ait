@@ -19,8 +19,8 @@ public class RecensioneActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recensioni);
         Toolbar toolbar = findViewById(R.id.toolbar_rece);
-        toolbar.setTitle(""); //TODO Titolo luogo
-
+        toolbar.setTitle("");
+        setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -29,7 +29,7 @@ public class RecensioneActivity extends AppCompatActivity
                 onBackPressed();
             }
         });
-        setSupportActionBar(toolbar);
+
         Bundle bundle = getIntent().getExtras();
         String name = "";
         
