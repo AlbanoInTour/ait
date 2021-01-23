@@ -4,91 +4,241 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryBackground"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="AppLogo"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:titleTextColor="@color/black" />
 
-    <Button
-        android:id="@+id/btnReligiosi"
-        android:layout_width="wrap_content"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mainButtonList"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
-        android:onClick="startList"
-        android:text="@string/btnReligiosi"
-        app:layout_constraintBottom_toTopOf="@+id/btnMostre"
-        app:layout_constraintEnd_toStartOf="@+id/btnStorici"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginHorizontal="30dp"
+        android:text="Lista Luoghi Di Interesse"
+        android:backgroundTint="@color/colorSecondary"
+        app:layout_constraintBottom_toTopOf="@+id/mainTableLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/mainToolbar"
+        android:onClick="startList"/>
 
-    <Button
-        android:id="@+id/btnStorici"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
-        android:onClick="startList"
-        android:text="@string/btnStorici"
-        app:layout_constraintBottom_toTopOf="@+id/btnMusei"
+    <TableLayout
+        android:id="@+id/mainTableLayout"
+        android:layout_width="320dp"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnReligiosi"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainButtonList">
 
-    <Button
-        android:id="@+id/btnMostre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startList"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="@string/btnMostre"
-        app:layout_constraintBottom_toTopOf="@+id/btnEventiCulturali"
-        app:layout_constraintEnd_toEndOf="@+id/btnReligiosi"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/btnReligiosi"
-        app:layout_constraintTop_toBottomOf="@+id/btnReligiosi" />
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btnMusei"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startList"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="@string/btnMusei"
-        app:layout_constraintBottom_toTopOf="@+id/btnParchi"
-        app:layout_constraintEnd_toEndOf="@+id/btnStorici"
-        app:layout_constraintStart_toStartOf="@+id/btnStorici"
-        app:layout_constraintTop_toBottomOf="@+id/btnStorici" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCardEdificiReligiosi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="startList">
 
-    <Button
-        android:id="@+id/btnEventiCulturali"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startList"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="@string/btnEventiCulturali"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnReligiosi"
-        app:layout_constraintStart_toStartOf="@+id/btnReligiosi"
-        app:layout_constraintTop_toBottomOf="@+id/btnMostre" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnParchi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="@string/btnParchi"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnMusei"
-        app:layout_constraintStart_toStartOf="@+id/btnMusei"
-        app:layout_constraintTop_toBottomOf="@+id/btnMusei"
-        android:onClick="startList" />
+                    <ImageView
+                        android:id="@+id/mainImageEdificiReligiosi"
+                        android:layout_width="160dp"
+                        android:layout_height="130dp"
+                        app:srcCompat="@drawable/edificireligiosi" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btnReligiosi"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCardEdificiStorici"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="startList">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/mainImageEdificiStorici"
+                        android:layout_width="140dp"
+                        android:layout_height="130dp"
+                        app:srcCompat="@drawable/edificistorici" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btnStorici"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCardMostre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="startList">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/mainImageMostre"
+                        android:layout_width="160dp"
+                        android:layout_height="130dp"
+                        app:srcCompat="@drawable/mostre" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btnMostre"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCardMusei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="startList">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/mainImageMusei"
+                        android:layout_width="160dp"
+                        android:layout_height="130dp"
+                        app:srcCompat="@drawable/musei" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btnMusei"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCardEventiCulturali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="startList">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/mainImageEventiCulturali"
+                        android:layout_width="160dp"
+                        android:layout_height="130dp"
+                        app:srcCompat="@drawable/eventiculturali" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btnEventiCulturali"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCardParchi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="startList">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/mainImageParchi"
+                        android:layout_width="160dp"
+                        android:layout_height="130dp"
+                        app:srcCompat="@drawable/parchi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btnParchi"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </TableRow>
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
