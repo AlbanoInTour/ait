@@ -43,14 +43,14 @@ public class Recensioni_List
         Recensioni.add(new Recensione("Villa di Pompeo Magno", "Riccardo", "un bel posto con tanto verde e tanti alberi pini abeti e quercie secolari, un posto da vedere!", 4));
         Recensioni.add(new Recensione("Villa romana ai Cavallacci", "Vincenzo", "Potrebbe essere un patrimonio bellissimo ma è tendenzialmente lasciato all'incuria tra le erbe alte. È possibile \"visitarla\" solo da dietro un'inferriata.", 3));
         Recensioni.add(new Recensione("Villa romana ai Cavallacci", "Vittorio", "Ormai lasciato lì senza che nessuno si occupi. Però bel posto!", 3));
-        Recensioni.add(new Recensione("Porta Pretoria e Porta Principalis Sinistra", "Roberto", "...", 4));
-        Recensioni.add(new Recensione("Porta Pretoria e Porta Principalis Sinistra", "Alessandro", "...", 5));
-        Recensioni.add(new Recensione("Porta Pretoria e Porta Principalis Sinistra", "Nicola", "...", 3));
+        Recensioni.add(new Recensione("Porta Pretoria e Porta Principalis Sinistra", "Roberto", "Molto bello", 4));
+        Recensioni.add(new Recensione("Porta Pretoria e Porta Principalis Sinistra", "Alessandro", "Fantastico", 5));
+        Recensioni.add(new Recensione("Porta Pretoria e Porta Principalis Sinistra", "Nicola", "Carino", 3));
         Recensioni.add(new Recensione("Museo archeologico di Albano", "Lorenzo", "Meravigliosa location in centro ad Albano. Esaustiva spiegazione dell'origine geologica dei castelli romani.", 5));
         Recensioni.add(new Recensione("Museo archeologico di Albano", "Teresa", "Il museo civico di Albano Laziale è un patrimoni da non sottovalutare per la formazione culturale degli adulti e luogo di studio per gli studenti di ogni ordine e grado!", 5));
         Recensioni.add(new Recensione("Museo della Seconda Legione Partica", "Vanessa", "Museo molto piccolo ma ben curato. Personale gentile e disponibile a spiegare anche gli altri siti archeologici della città.", 3));
         Recensioni.add(new Recensione("Museo della Seconda Legione Partica", "Maria", "Un museo chiuso in orario di apertura senza nessun avviso è impossibile da recensire! Meriterebbe zero!", 1));
-        Recensioni.add(new Recensione("Palazzo Savelli", "Giorgia", "Bellissimo posto immerso nel verde.. Buonissimo e bellissimo il ristorante al suo interno \"al castello\". ", 5));
+        Recensioni.add(new Recensione("Palazzo Savelli", "Giorgia", "Bellissimo posto immerso nel verde...Buonissimo e bellissimo il ristorante al suo interno \"al castello\". ", 5));
         Recensioni.add(new Recensione("Palazzo Savelli", "Matteo", "Bel posto da visitare, dall'alto si vede scorrere il Tevere. Da vedere sicuramente.", 5));
         Recensioni.add(new Recensione("Villa Doria - Pamphili", "Elena", "Sapete quando dovete liberare corpo e mente da tutto e tutti? Ecco, concedetevi una pausa dallo stress quotidiano, fatevi una corsa, una passeggiata nel verde...Sublime", 5));
         Recensioni.add(new Recensione("Villa Doria - Pamphili", "Daniele", "Il giardino pubblico di Albano Laziale sempre e comunque carico di fascino e di storia per questa bella città dei Castelli romani.", 5));
