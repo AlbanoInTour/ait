@@ -25,20 +25,22 @@ public class MainActivity extends AppCompatActivity {
     
     public void startList(View view){
         Intent intent = new Intent(this, BCListActivity.class);
-        String []filters = getResources().getStringArray(R.array.filters);
-        String filter = "";
-        if(view.getId() == R.id.mainCardEdificiReligiosi)
-            intent.putExtra("filter", filters[0]);
-        else if(view.getId() == R.id.mainCardEdificiStorici)
-            intent.putExtra("filter", filters[1]);
-        else if(view.getId() == R.id.mainCardMostre)
-            intent.putExtra("filter", filters[2]);
-        else if(view.getId() == R.id.mainCardMusei)
-            intent.putExtra("filter", filters[3]);
-        else if(view.getId() == R.id.mainCardEventiCulturali)
-            intent.putExtra("filter", filters[4]);
-        else if(view.getId() == R.id.mainCardParchi)
-            intent.putExtra("filter", filters[5]);
+        if (view.getId() != R.id.mainButtonList) {
+            String[] filters = getResources().getStringArray(R.array.filters);
+            String filter = "";
+            if (view.getId() == R.id.mainCardEdificiReligiosi)
+                intent.putExtra("filter", filters[0]);
+            else if (view.getId() == R.id.mainCardEdificiStorici)
+                intent.putExtra("filter", filters[1]);
+            else if (view.getId() == R.id.mainCardMostre)
+                intent.putExtra("filter", filters[2]);
+            else if (view.getId() == R.id.mainCardMusei)
+                intent.putExtra("filter", filters[3]);
+            else if (view.getId() == R.id.mainCardEventiCulturali)
+                intent.putExtra("filter", filters[4]);
+            else if (view.getId() == R.id.mainCardParchi)
+                intent.putExtra("filter", filters[5]);
+        }
         startActivity(intent);
         
     }
