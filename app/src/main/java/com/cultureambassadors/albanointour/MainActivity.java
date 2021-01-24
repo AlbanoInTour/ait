@@ -18,9 +18,6 @@ public class MainActivity extends AppCompatActivity {
         setTheme(R.style.Theme_AlbanoInTour);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.mainToolbar);
-        toolbar.setTitle(R.string.app_name);
-
     }
     
     public void startList(View view){
